@@ -1,7 +1,13 @@
 {
-  "name": "jaydeep-s-portfolio",
+  "name": "jaydeep-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Jaydeepsinh Chavda",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chavdajyu/Main-_Portfolio.git"
+  },
+  "homepage": "https://github.com/Chavdajyu/Main-_Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",

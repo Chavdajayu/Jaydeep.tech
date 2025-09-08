@@ -92,7 +92,7 @@ const FirstPage = () => {
             Contact me here →
           </a>
           <a
-            href="/MukulChughCV.pdf"
+            href="/JaydeepCV.pdf"
             download
             className="px-6 py-3 rounded-full bg-white text-black font-medium shadow-md hover:shadow-lg transition"
           >
@@ -103,7 +103,7 @@ const FirstPage = () => {
         {/* Socials */}
         <div className="flex gap-4 mt-6">
           <a
-            href="https://linkedin.com/in/mukulchugh"
+            href="https://linkedin.com/in/jaydeepsinh-chavda"
             target="_blank"
             rel="noopener noreferrer"
             className="h-12 w-12 flex items-center justify-center rounded-full bg-white shadow hover:shadow-lg transition"
@@ -111,7 +111,7 @@ const FirstPage = () => {
             <FaLinkedin className="text-black text-xl" />
           </a>
           <a
-            href="https://github.com/mukulchugh"
+            href="https://github.com/Chavdajyu"
             target="_blank"
             rel="noopener noreferrer"
             className="h-12 w-12 flex items-center justify-center rounded-full bg-white shadow hover:shadow-lg transition"
@@ -119,7 +119,7 @@ const FirstPage = () => {
             <FaGithub className="text-black text-xl" />
           </a>
           <a
-            href="https://twitter.com/themukulchugh"
+            href="https://twitter.com/JaydeepChavda"
             target="_blank"
             rel="noopener noreferrer"
             className="h-12 w-12 flex items-center justify-center rounded-full bg-white shadow hover:shadow-lg transition"
