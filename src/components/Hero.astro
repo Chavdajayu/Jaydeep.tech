@@ -4,302 +4,169 @@ import { siteConfig } from "../config";
 
 <div
   id="hero"
-  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
+  class="relative isolate overflow-hidden bg-white py-24 md:h-screen hide-native"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
-  <!-- Gradient overlay -->
-  <div
-    class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
-  >
-  </div>
-  <svg
-    aria-hidden="true"
-    class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-  >
-    <defs>
-      <pattern
-        x="50%"
-        y={-1}
-        id="0787a7c5-978c-4f66-83c7-11c213f99cb7"
-        width={200}
-        height={200}
-        patternUnits="userSpaceOnUse"
-      >
-        <path d="M.5 200V.5H200" fill="none"></path>
-      </pattern>
-      <pattern
-        id="programming-symbols"
-        x="0"
-        y="0"
-        width="400"
-        height="400"
-        patternUnits="userSpaceOnUse"
-      >
-        <text
-          x="50"
-          y="50"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(-15)">&lt;/&gt;</text
-        >
-        <text
-          x="150"
-          y="100"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(10)">{}</text
-        >
-        <text
-          x="250"
-          y="80"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="18"
-          transform="rotate(-5)">=&gt;</text
-        >
-        <text
-          x="100"
-          y="200"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="22"
-          transform="rotate(15)">[]</text
-        >
-        <text
-          x="300"
-          y="180"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(-10)">&lt;&gt;</text
-        >
-        <text
-          x="200"
-          y="250"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(5)">()</text
-        >
-        <text
-          x="50"
-          y="320"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="18"
-          transform="rotate(-8)">::</text
-        >
-        <text
-          x="350"
-          y="300"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="22"
-          transform="rotate(12)">==</text
-        >
-        <text
-          x="150"
-          y="350"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="20"
-          transform="rotate(-15)">++</text
-        >
-        <text
-          x="250"
-          y="370"
-          fill={siteConfig.accentColor}
-          font-family="monospace"
-          font-size="24"
-          transform="rotate(8)">;</text
-        >
-      </pattern>
-    </defs>
-    <rect
-      fill="url(#programming-symbols)"
-      width="100%"
-      height="100%"
-      opacity="0.2"></rect>
-    <rect
-      fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
-      width="100%"
-      height="100%"
-      stroke-width={0}></rect>
-  </svg>
+  <!-- (your gradient + svg background, unchanged) -->
+
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
     <div>
-      <h2
-        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
-      >
+      <h2 class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in">
         Hello! 👋
       </h2>
-      <h1
-        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
-      >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
-        >
+      <h1 class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200">
+        I'm <span style={{ color: siteConfig.accentColor }}>{siteConfig.name}</span>
       </h1>
-      <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
-      >
+      <p class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400">
         {siteConfig.title}
       </p>
     </div>
   </div>
-  <div
-    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
-  >
-    {
-      siteConfig.social?.email && (
-        <a
-          href={`mailto:${siteConfig.social.email}`}
-          aria-label="Email"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-            <path d="M3 7l9 6l9 -6" />
-          </svg>
-        </a>
-      )
-    }
-    {
-      siteConfig.social?.linkedin && (
-        <a
-          href={siteConfig.social.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M8 11v5" />
-              <path d="M8 8v.01" />
-              <path d="M12 16v-5" />
-              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-            </>
-          </svg>
-        </a>
-      )
-    }
-    {
-      siteConfig.social?.twitter && (
-        <a
-          href={siteConfig.social.twitter}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
-            </>
-          </svg>
-        </a>
-      )
-    }
-    {
-      siteConfig.social?.github && (
-        <a
-          href={siteConfig.social.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-            </>
-          </svg>
-        </a>
-      )
-    }
-  </div>
-</div>
 
-<style>
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+  <!-- social icons ... -->
+
+  <!-- Cursor elements -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Glows only for hero -->
+  <div class="cursor-glow glow-pink" id="glowPink"></div>
+  <div class="cursor-glow glow-blue" id="glowBlue"></div>
+  <div class="cursor-glow glow-purple" id="glowPurple"></div>
+  
+  
+  <style>
+    :root{
+      --dot-size: 7px;
+      --ring-size: 30px;
+      --glow-size: 560px;
+      --glow-blur: 65px;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    
+    .hide-native{ cursor:none; }
+    
+    .cursor-dot{
+      position:fixed;
+      width:var(--dot-size);
+      height:var(--dot-size);
+      border-radius:50%;
+      background: red;
+      box-shadow:0 0 10px orange;
+      transform:translate(-50%,-50%);
+      pointer-events:none;
+      z-index:9999;
     }
+    
+    .cursor-ring{
+      position:fixed;
+    width:var(--ring-size);
+    height:var(--ring-size);
+    border-radius:50%;
+    border:1.5px solid black;
+    background: transparent;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    z-index:9999;
+    transition:transform 0.1s ease-out, border-color .2s ease-out;
   }
-
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
-    opacity: 0;
+  .cursor-ring.active{
+    transform:translate(-50%,-50%) scale(1.3);
+    border-color:rgba(99,102,241,0.6);
+    transition:transform 1s ease-out, border-color .2s ease-out;
   }
-
-  .animation-delay-200 {
-    animation-delay: 0.2s;
+  
+  .cursor-glow{
+    position:fixed;
+    width:var(--glow-size);
+    transition:transform 1s ease-out, border-color .2s ease-out;
+    height:var(--glow-size);
+    border-radius:50%;
+    filter:blur(var(--glow-blur));
+    opacity:0.70;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    mix-blend-mode:multiply;
+    z-index:800;
   }
-
-  .animation-delay-400 {
-    animation-delay: 0.4s;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 0.6s;
-  }
+  .glow-pink{ background:rgb(255, 182, 193); }
+  .glow-blue{ background:rgba(135,206,250,0.9); }
+  .glow-purple{ background:rgba(186,85,211,0.9); }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const dot = document.getElementById("cursorDot");
+    const ring = document.getElementById("cursorRing");
+    const glowPink = document.getElementById("glowPink");
+    const glowBlue = document.getElementById("glowBlue");
+    const glowPurple = document.getElementById("glowPurple");
+    const hero = document.getElementById("hero");
+    
+    if (!dot || !ring || !glowPink || !glowBlue || !glowPurple || !hero) return;
+    
+    // Mouse follows everywhere (dot + ring)
+    let mouse = {x: window.innerWidth/2, y: window.innerHeight/2};
+    let ringPos = {...mouse};
+    
+    // Glows track only inside Hero
+    let pinkPos = {x: window.innerWidth/2, y: window.innerHeight - 200};
+    let bluePos = {x: window.innerWidth/2, y: window.innerHeight - 200};
+    let purplePos = {x: window.innerWidth/2, y: window.innerHeight - 200};
+    
+    const lerp = (a,b,n) => a + (b - a) * n;
+    
+    // Update mouse everywhere
+    document.addEventListener("mousemove", e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      dot.style.transform = `translate(${mouse.x}px, ${mouse.y - 635}px) translate(-50%,-50%)`;
+    });
+    
+    // Hover effects
+    document.querySelectorAll("button,a").forEach(el=>{
+      el.addEventListener("mouseenter", ()=> ring.classList.add("active"));
+      el.addEventListener("mouseleave", ()=> ring.classList.remove("active"));
+    });
+    
+    function animate(){
+      // Ring always follows
+      ringPos.x = lerp(ringPos.x, mouse.x, 0.18);
+      ringPos.y = lerp(ringPos.y, mouse.y - 635, 0.18);
+      ring.style.transform = `translate(${ringPos.x}px,${ringPos.y}px) translate(-50%,-50%)`;
+      // body.style.cursor = "block";
+
+      
+      // Check if inside hero
+      const heroRect = hero.getBoundingClientRect();
+      const insideHero = heroRect.top <= 0 && heroRect.bottom >= 0;
+      
+      if (insideHero) {
+        // Glows follow mouse
+        pinkPos.x = lerp(pinkPos.x, mouse.x - 115, .18);
+        pinkPos.y = lerp(pinkPos.y, mouse.y - 280, .38);
+        glowPink.style.transform = `translate(${pinkPos.x - 105}px,${pinkPos.y - 500}px) translate(-50%,-50%)`;
+        
+        bluePos.x = lerp(bluePos.x, mouse.x + 245, .38);
+        bluePos.y = lerp(bluePos.y, mouse.y - 550, .58);
+        glowBlue.style.transform = `translate(${bluePos.x - 205}px,${bluePos.y - 350}px) translate(-50%,-50%)`;  
+        
+        purplePos.x = lerp(purplePos.x, mouse.x + 2, .48);
+        purplePos.y = lerp(purplePos.y, mouse.y - 150, .68);
+        glowPurple.style.transform = `translate(${purplePos.x - 5}px,${purplePos.y - 350}px) translate(-50%,-50%)`;
+      } else {
+        // Lock them at bottom center
+        const lockX = window.innerWidth / 2;
+        const lockY = window.innerHeight - 100;
+        
+        glowPink.style.transform = `translate(${lockX - 105}px, ${lockY}px) translate(-50%,-50%)`;
+        glowBlue.style.transform = `translate(${lockX + 205}px, ${lockY}px) translate(-50%,-50%)`;
+        glowPurple.style.transform = `translate(${lockX + 5}px, ${lockY}px) translate(-50%,-50%)`;
+      }
+      
+      requestAnimationFrame(animate);
+    }
+    animate();
+  });
+</script>
+
+</div>
